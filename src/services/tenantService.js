@@ -118,7 +118,7 @@ export const tenantService = {
   releaseRoom: async (roomId, tenantId) => {
     const response = await axios.put(`${API_URL}/api/rooms/${roomId}/release`, { tenantId }, { headers: getAuthHeader() });
     return response.data;
-  },
+  }, 
 
   getStats: async () => {
     const [tenants, rooms] = await Promise.all([
